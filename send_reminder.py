@@ -22,7 +22,7 @@ def build_message(now):
     date_str = now.strftime("%Y-%m-%d")
     day_of_week = DAYS_OF_WEEK[now.weekday()]
     holiday_status = get_holiday_status(now.date())
-    return f"Reminder: Post your daily worklog\n{date_str} ({day_of_week}) - {holiday_status}"
+    return f"📝 Post your daily worklog: {date_str} ({day_of_week}, {holiday_status})"
 
 
 def send_to_slack(webhook_url, text):
